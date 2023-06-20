@@ -26,7 +26,7 @@ jobs:
 
       - name: Switch Docker Buildx to a different driver
         run: |
-          docker buildx create --use --driver docker-container
+          docker buildx create --use --driver docker-containerd
           docker buildx inspect --bootstrap
 
       - name: Login to Azure Container Registry
